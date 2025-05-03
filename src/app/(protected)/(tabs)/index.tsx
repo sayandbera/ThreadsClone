@@ -3,7 +3,7 @@ import { dummyPosts } from "@/dummyData";
 import React from "react";
 import { FlatList } from "react-native";
 
-const Home = () => {
+const HomeScreen = () => {
   return (
     <FlatList
       data={dummyPosts}
@@ -13,4 +13,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomeScreen;

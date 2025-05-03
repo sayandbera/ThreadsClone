@@ -1,5 +1,5 @@
 import Ionicons from "@expo/vector-icons/Ionicons";
-import { Tabs } from "expo-router";
+import { router, Tabs } from "expo-router";
 
 export default function TabsLayout() {
   return (
@@ -35,6 +35,22 @@ export default function TabsLayout() {
             />
           ),
         }}
+      />
+
+      <Tabs.Screen
+        name="plus"
+        options={{
+          title: "Add",
+          tabBarIcon: ({ color }) => (
+            <Ionicons name="add-outline" size={32} color={color} />
+          ),
+        }}
+        listeners={() => ({
+          tabPress: async (e) => {
+            e.preventDefault();
+            router.push("/new");
+          },
+        })}
       />
 
       <Tabs.Screen

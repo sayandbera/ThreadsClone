@@ -1,4 +1,4 @@
-import { User, Post } from "./types"; // Assuming types.ts is in the same directory or adjust the path
+import { Post, User } from "./types"; // Assuming types.ts is in the same directory or adjust the path
 
 // --- Dummy Users ---
 export const dummyUsers: User[] = [
@@ -46,7 +46,7 @@ export const dummyPosts: Post[] = [
   // User 1 Posts
   {
     id: "p1",
-    createdAt: "2023-10-26T10:00:00Z",
+    createdAt: "2025-04-26T10:00:00Z",
     content: "Just deployed a new feature for the Threads clone! #ReactNative",
     user_id: "u1",
     user: dummyUsers[0],
@@ -67,7 +67,7 @@ export const dummyPosts: Post[] = [
   // User 2 Posts
   {
     id: "p3",
-    createdAt: "2023-10-26T10:15:00Z",
+    createdAt: "2024-07-26T10:15:00Z",
     content: "Loving the autumn colors on my hike today! 🍂",
     user_id: "u2",
     user: dummyUsers[1],
@@ -88,7 +88,7 @@ export const dummyPosts: Post[] = [
   // User 3 Posts
   {
     id: "p5",
-    createdAt: "2023-10-26T10:30:00Z",
+    createdAt: "2025-01-26T10:30:00Z",
     content: "New song idea brewing... 🎶",
     user_id: "u3",
     user: dummyUsers[2],
