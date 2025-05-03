@@ -10,7 +10,7 @@ import {
   View,
 } from "react-native";
 
-export default function SignInScreen() {
+export default function LoginScreen() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
