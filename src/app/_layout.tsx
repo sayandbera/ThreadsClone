@@ -1,3 +1,5 @@
+import "../../global.css";
+import { DarkTheme, Theme, ThemeProvider } from "@react-navigation/native";
 import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
@@ -13,11 +15,22 @@ export default function RootLayout() {
     return null;
   }
 
+  const CustomDarkTheme: Theme = {
+    ...DarkTheme,
+    colors: {
+      ...DarkTheme.colors,
+      primary: "white",
+      card: "#101010",
+    },
+  };
+
   return (
-    <Stack>
+    <ThemeProvider value={CustomDarkTheme}>
+      <Stack>
+        <Stack.Screen name="(protected)" options={{ headerShown: false }} />
+        <Stack.Screen name="(auth)" />
+      </Stack>
       <StatusBar style="auto" />
-      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-      <Stack.Screen name="(protected)" />
-    </Stack>
+    </ThemeProvider>
   );
 }
