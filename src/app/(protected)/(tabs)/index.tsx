@@ -1,11 +1,15 @@
+import PostListItem from "@/components/PostListItem";
+import { dummyPosts } from "@/dummyData";
 import React from "react";
-import { Text, View } from "react-native";
+import { FlatList } from "react-native";
 
 const Home = () => {
   return (
-    <View>
-      <Text className="text-3xl font-bold text-center text-red-500">Home</Text>
-    </View>
+    <FlatList
+      data={dummyPosts}
+      keyExtractor={(item) => item.id}
+      renderItem={({ item }) => <PostListItem post={item} />}
+    />
   );
 };
 
